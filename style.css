@@ -1,0 +1,210 @@
+
+
+/* CSS STYLING DOCUMENT FOR MONDAY 11 CSE 360 Group
+ * 
+ * To Use: put "-fx-" before most css styling components
+ * You can also make custom styling tag, by using the <obj>.setId(STRING); on most JavaFX elements
+ * 
+ * In Order to link elements to this document
+ * use <SCENE OBJ>.getStylesheets().add(getClass().getResource("/application/style.css").toExternalForm());
+ * on the scene object in a class.
+ * 
+ * The SupressWarnings are added to make it so we don't see the random erros that we can't seem to disable or turn off
+ * 
+ */
+
+
+ /*
+Here is the charcol
+#2E2E2E
+*/
+
+
+ VBox {
+	-fx-background-color: #E3ECF1;
+	-fx-border-color: #E3ECF1;
+}
+
+TextField {
+	-fx-background-color: #D8B15C;
+	-fx-text-fill: #2E2E2E;
+	-fx-text-color: #2E2E2E;
+	-fx-prompt-text-fill: #2E2E2E;
+}
+PasswordField{
+	-fx-background-color: #D8B15C;
+	-fx-text-fill:#2E2E2E;
+	-fx-text-color: #2E2E2E;
+	-fx-prompt-text-fill: #2E2E2E;
+}
+
+/*DEFAULT All buttons*/
+.button {
+														
+    -fx-text-alignment: center;					
+    -fx-background-color: #588bdb;		
+    -fx-text-fill: #ffffff;			
+    -fx-font-family: Calibri, serif;							
+    -fx-text-decoration: none;
+    -fx-padding-bottom: 30px;
+    -fx-border-radius: 100px;
+} .button:hover{/* @SuppressWarning */
+	 -fx-background-color: #477cd1;			
+	 -fx-border-radius: 100px;								
+	 -fx-transition: background-color 2s linear;  					
+	 -fx-effect: dropshadow(gaussian, black, 5, 0, 0, 0);						
+} .button:pressed{													
+	 -fx-scale-x: 1.05; 							
+     -fx-scale-y: 1.05;
+}
+.button:focused{
+	-fx-effect: dropshadow(gaussian, black, 5, 0, 0, 0);						
+}
+/*END BUTTONS*/
+
+
+#new-question:hover{									
+	-fx-text-fill: white; 				
+    -fx-background-color: #04AA6D;
+	/* 
+    -fx-background-color: #FFFFFF;
+    -fx-text-color:	#017047;
+    -fx-text-fill:	#017047;*/
+}
+
+
+/*VIEWDISCUSSION PAGE SPECIFICS*/
+	/*MAIN BORDERPANE on ViewDiscussions Page: Holds all Components of the Page*/
+	#layout{												
+		-fx-background-color: #E3ECF1;
+	}
+	/*Right SCROLLPANE on ViewDiscussions Page: Holds all Content associated with Each Question and it's Associated Answers*/
+	#question-content-box{
+		-fx-background-color: #E3ECF1; 
+		-fx-border-color: #c0c0c0;
+	}
+	/*Left SCROLLPANE on ViewDiscussions Page: Holds all Question Buttons generated from the Database Pull*/
+	#question-list-box{
+		-fx-background: #E3ECF1;
+	}
+	/*COLUMN OF QUESTION BOXES*/
+	#discussion-control-vertical.button{ /*This is for all button objects associated with the discussion-control-vertical TAG */
+		-fx-background-color: #D8B15C ;	
+		-fx-font-size: 12px;
+		-fx-text-fill: #FFFFFF;
+
+
+		/* FFB6A6 */
+		/* D8B15C  GOLDish*/
+		/* A6E4D0  */
+	}
+	#discussion-control-vertical.button:hover{ /*This is for the Hovering of all button objects associated with the discussion-control-vertical TAG */
+		-fx-background-color: #C59A4F ;	
+		-fx-font-size: 12px;
+	}
+	/*TOP CONTROL BAR IN DISCUSSION BOARD*/
+	#discussion-control-horizontal.button{ 
+		-fx-background-color: #4C85C5;
+		-fx-font-size: 15px;
+		-fx-text-fill: #FFFFFF;
+	}
+	#discussion-control-horizontal.button:hover{
+		-fx-background-color: #4C85C5;
+		-fx-font-size: 15px;
+		-fx-text-fill: #FFFFFF;
+	}
+	/*Each Answer VBOX in the Discussion Board*/
+	#answer-box{
+		-fx-opacity: 1;
+	}
+	#answer-box:hover{
+		-fx-opacity: 1;
+	}
+	/*The Buttons with Each Answer*/
+	#answer-box-buttons.button{
+		-fx-background-color: #b5d7db;
+		-fx-font-weight: none;
+		-fx-text-fill:#3f3e3e;
+		-fx-text-color:#3f3e3e;
+
+	}
+	/*#answer-box-buttons.button:hover{
+
+	}*/
+	#discussion-title{
+		-fx-font-size: 36px;
+		-fx-font-weight: bold;
+		-fx-text-fill: #2E2E2E;
+		-fx-padding: 0px 0px 0px 20px;
+		-fx-font-family: Calibri, serif;	
+									
+
+	}
+	#discussion-question{
+		-fx-font-size: 24px;
+		-fx-font-weight: bold;
+		-fx-text-fill: #2E2E2E;
+		-fx-padding: 0px 0px 0px 15px;
+		-fx-font-family: Calibri, serif;	
+									
+
+	}
+	#discussion-hbox.hbox{
+		-fx-font-family: Calibri, serif;
+									
+
+	}
+	#discussion-info{
+		-fx-font-family: Calibri, serif;							
+	}
+
+
+/*END VIEWDISCUSSION PAGE*/
+
+
+#fancy-login.button{
+	-fx-font-size: 20;
+	-fx-width: 10px;
+	-fx-border-radius: 40px;
+}
+
+
+
+/*Standard for User Pages as of now*/
+#standard-page-vbox-layout{
+	-fx-background-color: #E3ECF1;
+	-fx-border-color: #E3ECF1;
+	-fx-border-width: 10px;
+}
+
+/*For the List Users Page*/
+	#label-title{
+		-fx-font-family: Calibri, serif;
+		-fx-font-weight: bold;	
+	}
+	#label-text{
+		-fx-font-family: Calibri, serif;	
+	}
+
+/*Text: #2E2E2E
+Background: #E3ECF1
+Primary: #4C85C5
+Secondary: #E67C73
+Accent: #F4A261*/
+
+
+
+#answer-delete-button.button{													
+	-fx-font-weight: bold;									
+	-fx-background-color: #d11b1b; 									
+	-fx-text-fill: #FFFFFF;
+	-fx-text-color: #FFFFFF;
+}
+
+#answer-delete-button.button:hover{														
+	-fx-text-fill: #d11b1b;	
+	-fx-text-color: #d11b1b;				
+	-fx-background-color: #FFFFFF;
+}
+
+
