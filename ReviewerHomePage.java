@@ -58,6 +58,13 @@ public class ReviewerHomePage {
 			ConversationListPage conversationPage = new ConversationListPage(databaseHelper);
 			conversationPage.show(user);
 		});
+		
+		Button viewMessagesButton = new Button("View Private Messages");
+		viewMessagesButton.setOnAction(e -> new ConversationListPage(databaseHelper).show(user));
+		
+		
+		Button createMessageButton = new Button("Create Private Message");
+		createMessageButton.setOnAction(e -> new CreatePrivateMessage(databaseHelper, user).show(primaryStage));
 
 		Button reviewListPage = new Button("View List of Reviews");
 		reviewListPage.setOnAction(c->{
@@ -66,8 +73,10 @@ public class ReviewerHomePage {
 		});
 
 		
+		
+		
 		// Add all elements to page
-		layout.getChildren().addAll(helloLabel, logoutButton, conversationButton, reviewListPage);
+		layout.getChildren().addAll(helloLabel, logoutButton, conversationButton, reviewListPage, viewMessagesButton, createMessageButton);
 		
 		
 		// Configure and set window visible
