@@ -50,6 +50,13 @@ public class InstructorHomePage {
 				userLoginPage.show(primaryStage);
 		});
 
+		Button viewMessagesButton = new Button("View Private Messages");
+		viewMessagesButton.setOnAction(e -> new ConversationListPage(databaseHelper).show(user));
+		
+		
+		Button createMessageButton = new Button("Create Private Message");
+		createMessageButton.setOnAction(e -> new CreatePrivateMessage(databaseHelper, user).show(primaryStage));
+
 		
 		// Responding to Reviewer Requests Functionality ************************
 		Button viewReviewerRequests = new Button ("View Reviewer Requests");
@@ -60,8 +67,9 @@ public class InstructorHomePage {
 		});
 		
 		
+
 		// Add all elements to layout
-		layout.getChildren().addAll(helloLabel, logoutButton, viewReviewerRequests);
+		layout.getChildren().addAll(helloLabel, logoutButton, viewReviewerRequests, viewMessagesButton, createMessageButton);
 		
 		
 		// Configure and set window visible
